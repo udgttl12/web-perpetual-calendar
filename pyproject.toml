@@ -1,0 +1,30 @@
+[project]
+name = "web-perpetual-calendar"
+version = "0.1.0"
+description = "Prototype of a perpetual calendar API using FastAPI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.103.0",
+    "uvicorn[standard]>=0.23.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "jinja2>=3.1.0",
+    "sxtwl>=1.0.0",
+    "sqlmodel>=0.0.14",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "pre-commit",
+    "httpx",
+]
+
+[tool.ruff]
+line-length = 88
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
